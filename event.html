@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event file</title>
+</head>
+<body>
+    <p>event</p>
+
+    <!-- submit[on-submit]
+    change[onchange]
+    resize[onresize]
+    click[onclick]
+    load[onload] -->
+
+    <!-- key events -->
+
+     <!-- key press-older versions
+       key down -->
+
+    <!-- <button script onClick="alert({
+        console.log('Hello')
+    })">Submit</button> -->
+    <!-- <button onclick="(alert('hello'))">Submit</button> -->
+
+    <button onclick="(
+        window.prompt('Enter your name'))">Submit</button> 
+    
+        Assignment
+        <!--creata a form style it with css 
+        create an event on the form and show an alert of 'form submitted' -->
+        <!-- console your name alert your name -->
+            <button id="btn">click me!!</button>
+    <script>
+
+        //  onclick events
+
+        let button = document.getElementById("btn");
+        button.addEventListener("click",(event)=>{
+            // alert("buttonclicked!!");
+            // console.log(button);
+            // button.style.color = "yellow";
+            // event.target.style.color = "blue";
+        });
+
+        button.addEventListener("click",function(event){
+            setTimeout(()=>{
+                event.target.style.color = "orange";
+            },3000);
+        })
+
+    // create a style add padding 
+    // change the background color 
+    // text transform(uppercase)
+
+    // Have an image that when you clicked on the image its going to change to anotherimage
+
+    </script>
+      
+         
+
+</body>
+</html>

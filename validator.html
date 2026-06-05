@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient( blue,purple);
+        }
+        .form {
+            background-color: rgb(247, 196, 196);
+            width: 50vw;
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+
+        }
+        h2{
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        input{
+            width: 45vw;
+            margin: 20px;
+            height: 55px;
+            border-radius: 5px;
+            padding: 5px;
+            border: none;
+        }
+        .success{
+            border: 1px solid green;
+             width: 80%;
+            height: 10%;
+            display: none;
+            color: green;
+            padding: 10px;
+            justify-content: center;
+            border-radius: 5px;
+            align-content: center;
+        }
+        .error{
+            border: 1px solid red;
+            width: 80%;
+            height: 10%;
+            display: none;
+            color: red;
+            padding: 10px;
+            border-radius: 5px;
+            align-content: center;
+            /* display: flex; */
+        }
+    </style>
+</head>
+<body>
+    <form action="" class="form">
+        <h2 class="header">Age Validator</h2>
+        <div class="error">
+            <span id ="errorMessage"></span>
+            <span id="closeError">x</span>
+        </div>
+        <div class="success">
+            <span id ="successMessage"></span>
+            <span id="closeSuccess"></span>
+        </div>
+
+        <input type="number" placeholder="Enter age" class="enterAge">
+        <input type="submit" value = "Validate" class="button">
+    </form>
+
+    <script>
+        let button = document.querySelector(".button");
+        let closeError = document.getElementById("closeError");
+        let closeSuccess = document.getElementById("closeSuccess");
+
+        let error = document.querySelector(".error")
+        let success = document.querySelector(".success");
+
+        let errorMessage = document.getElementById("errorMessage")
+        let successMessage = document.getElementById("successMessage")
+
+        let header = document.querySelector(".header");
+
+        let regex = /^[a-zA-z0-9]+$/;
+
+        closeError.addEventListener("click", () => {
+            let error = document.querySelector(".error");
+            error.style.display = "none";
+
+        })
+
+        closeSuccess.addEventListener("click", () => {
+            let success = document.querySelector(".success");
+            success.style.display = "none"
+        })
+        button.addEventListener("click", (event) => {
+            event.preventDefault();
+            let age = document.querySelector(".enterAge").value;
+            
+            if (age == ""){
+                error.style.display = "block";
+                errorMessage.textContent = "Enter age";
+                success.style .display = "none"
+            }
+            else if (age <= 15){
+                error.style.display = "block";
+                errorMessage.textContent = "Age must between 16 and 30";
+            }
+            else if (age > 30){
+                error.style.display = "block";
+                errorMessage.textContent = "Age must between 16 and 30";
+            }
+
+            else {
+                error.style.display = "none";
+                // success.style.display = "block";
+                // successMessage.textContent = "Validation successful";
+                header.textContent= "validation successful"
+                header.style.color = "green";
+
+            }
+        })
+
+
+
+
+
+    </script>
+</body>
+</html>

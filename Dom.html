@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque numquam cum id fugit placeat voluptas praesentium sit dolorum quo, reiciendis atque sint eum deleniti inventore pariatur aperiam eos libero accusamus!</p> -->
+
+
+        <a href="switch-statement.html" id="link">click me</a>
+
+
+
+        <!-- ASSIGNMENT <br><br>
+     list all html attributes <br><br>
+     DIFFERENCE BTW INNERHTML AND TEXTCONTENT
+
+
+     INNERHTML
+     TEXTCONTENT -->
+
+    <!-- // Query selectorAll will turn all elements WHILE Query selector will turn only the first element -->
+     
+
+
+    <h1 id="title">welcome student</h1>
+    <p class="info">Name: John</p>
+    <p class="info">Course: web development</p>
+
+    <ul>
+        <li>html</li>
+        <li>css</li>
+        <li>Javascript</li>
+    </ul>
+
+
+
+</body>
+<script>
+    document.body.style.backgroundColor = "blue";
+    document.body.style.color = "white";
+
+
+  let link =  document.getElementById("link").href = "switch-statement.html";
+    console.log(link);
+
+// 1
+    let title = document.getElementById("title");
+    title.textContent = "WELCOME TO DOM MASTERY";
+    console.log(title);
+
+    // 2
+    let p = document.getElementsByClassName("info");
+    // p[0].style.color = "cyan";
+    // p[1].style.color = "magenta";
+    console.log(p);
+    p[0].style.backgroundColor = "yellow"
+
+    Array.from(p).forEach((para) => {
+            para.style.color = "magenta";
+    })
+
+    // 3
+    let lists = document.getElementsByTagName("li");
+    
+    Array.from(lists).forEach((list) => {
+            list.style.textTransform = "uppercase";
+            list.style.color = "purple";
+    })
+
+    // 4
+
+    let header = document.createElement("h1");
+     console.log(header);
+    // title.append(header);
+    document.body.prepend(header);
+
+
+    // ASSIGNMENT
+
+    // create 6 div elements,then let them have a class name div
+    // give them background color 
+    // div1 - yellow 
+    // div2 - blue
+    // div3 - green
+    // div4 - purple 
+    // div5 - pink
+    // div6 - orange
+
+
+    // Create list element then append them to the first div created
+    // Create a paragraph in javascript and append them to the fourth div created
+
+
+</script>
+</html>

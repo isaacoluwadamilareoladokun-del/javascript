@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Click me!!!</button> <br><br>
+    <img src="750eb8d77ab8eebdcd913a84e47ced48.jpg" alt="" id="img">
+</body>
+<script>
+    // EVENT LISTENER
+    // An event listener is a function that waits for a specific event to occur on an element and then executes a block of code in response to that event. It allows you to add interactivity to your web pages by responding to user actions such as clicks, mouse movements, keyboard input, and more.
+
+    // To add an event listener to an element, you can use the addEventListener() method. This method takes two arguments: the type of event you want to listen for (e.g., "click", "mouseover", "keydown") and the function that should be executed when the event occurs.
+
+    // Example:
+    // const button = document.getElementById("myButton");
+    // button.addEventListener("click", function() {
+    //     alert("Button was clicked!");
+    // });
+
+    // You can also use arrow functions for a more concise syntax:
+    // button.addEventListener("click", () => {
+    //     alert("Button was clicked!");
+    // });
+
+
+    // EVENTS
+
+    // submit- onsubmit-- by form ID
+    // change- onchange-- inpt or image changed
+    // load- onload -- web page finish loading
+    // hover
+
+    // KEY EVENTS
+    // Keypress-older versions
+    // keydown
+
+    // onclick events
+    let button  = document.getElementById("btn");
+    // button.addEventListener("click", (event) => {
+    //     // alert("button clicked");
+    //     // console.log("button clicked!!!");
+
+    //     // button.style.backgroundColor = "red";
+    //     event.target.style.color = "green";
+
+    // });
+
+    button.addEventListener("click", function(event) {
+        setTimeout(() => {
+            event.target.style.backgroundColor = "red";
+            event.target.style.padding = "10px";
+            event.target.style.color = "white";
+            event.target.style.borderRadius = "3px";
+            event.target.style.textTransform = "uppercase";
+        }, 1000);
+    });
+
+    // SET TIME OUT
+    // SET TIME OUT IS A FUNCTION THAT EXECUTES A BLOCK OF CODE AFTER A SPECIFIED AMOUNT OF TIME.
+    //  IT TAKES TWO ARGUMENTS: THE FUNCTION TO BE EXECUTED AND THE TIME IN MILLISECONDS AFTER WHICH THE FUNCTION SHOULD BE EXECUTED.
+    // 1s is also 
+    // PER 1000 IS SECONDS
+
+    // setTimeout(()=>{
+
+    // }, 2000);
+
+    // ASSIGNMENT.
+    //1. CREATE A STYLE TO ADD A PADDING , CHANGE THE BACKGROUND COLOR , COLOR, BORDER RADIUS, TEXT-TRANSFORM TO UPPERCASE.
+
+    // 2. YOU'RE GOING TO HAVE AN IMAGE , WHEN YOU CLICK ON THE IMAGE, THE IMAGE SHOULD CHANGE TO ANOTHER IMAGE. (USE EVENT LISTENER)
+
+    //  ANSWER
+
+    let img = document.getElementById("img");
+    img.style.width = "200px";
+    img.style.height = "100px";
+    img.style.cursor = "pointer";
+    img.objectFit = "contain";
+
+    img.addEventListener("click", function(event) {
+        event.target.src = "3b77322df5089bf15aa55c855829fede.jpg";
+    });
+
+    //let img = document.getElementById("img");
+    //img.style.width = "200px";
+    //img.style.height = "100px";
+    //img.style.cursor = "pointer";
+    //img.objectFit = "contain";
+
+    //img.addEventListener("click", function(event) {
+    //    event.target.src = "575c9836bbfd79b173596e5d0e3729ce.jpg";
+   // });
+
+
+
+</script>
+</html>

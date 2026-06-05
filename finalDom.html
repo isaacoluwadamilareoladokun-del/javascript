@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <style>
+    body{
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      padding: 30px;
+    }
+
+    .container{
+      width: 400px;
+    }
+
+    .form-box{
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+      margin-bottom: 20px;
+    }
+
+    h2{
+      text-align: center;
+      color: #333;
+    }
+
+    input{
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    button{
+      width: 100%;
+      padding: 10px;
+      margin-top: 15px;
+      background-color: royalblue;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover{
+      background-color: darkblue;
+    }
+
+    .previewBox{
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+      display: none;
+    }
+
+    .previewBox p{
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    span{
+      color: black;
+      font-weight: bold;
+    }
+    
+  </style>
+
+  <div class="container">
+
+    <!-- FORM -->
+    <div class="form-box">
+      <h2>Registration Form</h2>
+
+      <input type="text" id="name" placeholder="Enter your name">
+
+      <input type="email" id="email" placeholder="Enter your email">
+
+      <input type="password" id="password" placeholder="Enter your password">
+
+      <button>Register</button>
+    </div>
+
+    <!-- LIVE PREVIEW -->
+    <div class="previewBox">
+      <h2>Live Preview</h2>
+
+      <p>Name: <span id="showName"></span></p>
+
+      <p>Email: <span id="showEmail"></span></p>
+
+      <p>Password: <span id="showPassword"></span></p>
+      <p>Gender:  </p>
+    </div>
+
+  </div>
+
+  <script>
+    // GET INPUT ELEMENTS
+    let nameInput = document.getElementById("name");
+    let emailInput = document.getElementById("email");
+    let passwordInput = document.getElementById("password");
+
+    // GET DISPLAY ELEMENTS
+    let showName = document.getElementById("showName");
+    let showEmail = document.getElementById("showEmail");
+    let showPassword = document.getElementById("showPassword");
+    let previewBox = document.querySelector(".previewBox")
+
+    // SHOW INPUT VALUE AS USER TYPES
+    nameInput.addEventListener("keyup", function(){
+      showName.textContent = nameInput.value;
+      previewBox.style.display = ("block")
+    });
+
+    emailInput.addEventListener("keyup", function(){
+      showEmail.textContent = emailInput.value;
+      previewBox.style.display = ("block")
+    });
+
+    passwordInput.addEventListener("keyup", function(){
+      showPassword.textContent = passwordInput.value;
+      previewBox.style.display = ("block")
+    });
+
+    // previewBox.style.display = ("block")
+  </script>
+
+</body>
+</html>

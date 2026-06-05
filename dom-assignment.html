@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      
+</head>
+<body>
+    
+    <!-- <h1 id="title">Welcome Student</h1>
+
+    <p class="info">Name : John</p>
+    <p class="info">Course : Web development</p>
+
+    <ul>
+        <li>Html</li>
+        <li>css</li>
+        <li>javascript</li>
+    </ul>
+    <button id="changeBtn">Click Me </button> -->
+
+
+        <div class="div">yellow</div>
+        <div class="div">blue</div>
+        <div class="div">green</div>
+        <div class="div">purple</div>
+        <div class="div">orange</div>
+        <div class="div">pink</div>
+
+    <ul>
+        <li>Tennis</li>
+        <li>Football</li>
+        <li>Basketball</li>
+        <li>volley</li>
+    </ul>
+
+    <!-- <p>Append to the fourth div</p> -->
+
+</body>
+<script>
+    // document.getElementById("title").textContent = "Welcome to DOM Mastery";
+    // document.getElementsByClassName("info")[0].style.color = "blue";
+    // document.getElementsByClassName("info")[1].style.color = "aqua";
+    // document.getElementsByTagName("li")[0].textContent = "HTML";
+    // document.getElementsByTagName("li")[1].textContent = "CSS";
+    // document.getElementsByTagName("li")[2].textContent = "JAVASCRIPT";
+    // document.querySelector(".info").style.backgroundColor = "yellow";
+    // document.getElementById("changeBtn").onclick = function () {
+    //     document.getElementById("title").style.color = "green";
+    // };
+
+
+    let first = document.getElementsByClassName("div")[0]
+    first.style.backgroundColor = "yellow";
+
+    console.log(first);
+
+    let second = document.getElementsByClassName("div")[1];
+    second.style.backgroundColor = "blue";
+    console.log(second);
+
+    let third = document.getElementsByClassName("div")[2];
+    third.style.backgroundColor = "green";
+    console.log(third);
+    
+
+    let fourth = document.getElementsByClassName("div")[3];
+    fourth.style.backgroundColor = "purple";
+    console.log(fourth);
+
+    let fifth = document.getElementsByClassName("div")[4];
+    fifth.style.backgroundColor = "orange";
+    console.log(fifth);
+
+    let sixth = document.getElementsByClassName("div")[5];
+    sixth.style.backgroundColor = "pink";
+    console.log(sixth);
+   
+
+     let list = document.createElement("li");
+    first.append(list);
+    console.log(list);
+
+     let paragraph = document.createElement("p").textContent = " Append to the first div";
+    //  fourth.prepend(paragraph);
+    fourth.append(paragraph);
+    console.log(paragraph);
+    
+
+    title.classList.add(styles);
+    classList.remove
+
+
+// DARK MODE BECAUSE LIGHT ATTRACT BUGS
+
+
+
+ // ASSIGNMENT
+
+    // create 6 div elements,then let them have a class name div
+    // give them background color 
+    // div1 - yellow 
+    // div2 - blue
+    // div3 - green
+    // div4 - purple 
+    // div5 - pink
+    // div6 - orange
+
+
+    // Create list element then append them to the first div created
+    // Create a paragraph in javascript and append them to the fourth div created
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP</title>
+</head>
+<body>
+    <!-- OOP - object priented programming -->
+    <h1>OOP</h1>
+    <script>
+        let profile = {
+            name:"Isaac",
+            age:17,
+            address: "Egan-Igando, Lagos",
+            favFruits:["Mango", "Apple", "Pawpaw"],
+            nok: {
+                name:"Eunice",
+                age: 14,
+                address: "Behind filling station"
+            },
+            isOnline: true,
+            callMyProfile: function(){return`my name is ${this.name}, i am ${this.age} years old. i live at ${this.address}.`},
+
+            callfavFruits: function(){return`I love ${this.favFruit},`}
+        };
+        
+        console.log(profile.name);
+        console.log(profile.age);
+        console.log(profile.address);
+        profile.favFruits.forEach((favFruit)=>{
+        console.log(favFruit);
+        });
+        console.log(profile.isOnline);
+
+        profile.callMyProfile();
+        console.log(profile.callMyProfile());
+
+        // console.log(profile.callfavFruits);
+        // console.log(profile.favFruits.forEach((favFruit)));
+        
+
+        // constructors
+
+        function add(num1, num2){
+            let result = num1 + num2;
+            return result
+        }
+        console.log(add(5,5));
+
+
+        function Car(make, model, year, color){
+            this.make = make,
+            this.model = model,
+            this.year = year,
+            this.color = color,
+
+            this.drive = function () {return `You drive a ${make} ${model} ${year}`},
+            this.carYear = function(){console.log(`you brought this ${year} car.`)},
+            this.total = function(){ console.log(`You bought this ${this.make} ${this.model} in the year ${this.year} and the color is ${this.color}`)}
+        };
+
+        let car1 = new Car("toyota", "camry", 2020, "red");
+        let car2 = new Car("benz", "gle", 2023, "black");
+        let car3 = new Car("toyota", "corrolla", 2012, "white");
+
+        console.log(car1.make);
+        console.log(car1.model);
+        console.log(car1.year);
+        console.log(car1.color);
+
+        console.log(car1.drive());
+        console.log(car1.total()); 
+        car1.total;
+
+
+        console.log(car2.make);
+        console.log(car2.model);
+        console.log(car2.year);
+        console.log(car2.color);
+
+        console.log(car2.drive());
+        console.log(car2.total()); 
+        car2.total;
+
+
+        console.log(car3.make);
+        console.log(car3.model);
+        console.log(car3.year);
+        console.log(car3.color);
+
+        console.log(car3.drive());
+        console.log(car3.total());
+        car3.total;
+
+        // get the phone operatingsystem, color,manufacturer, year
+
+        
+
+        
+
+        
+
+
+
+
+    </script>
+</body>
+</html>
